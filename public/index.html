@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <title>IP Tracker</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">IP Address Tracker</h1>
+      <form method="POST" class="header__form">
+        <div class="header__content">
+          <input
+            type="text"
+            id="ip"
+            aria-label="Ingrese un ip o dominio"
+            class="header__input"
+            placeholder="Buscar cualquier dirección IP o dominio"
+          />
+        </div>
+      </form>
+    </header>
+    <div class="content-address">
+      <article class="address-info" id="addressInfo" aria-live="assertive">
+        <section class="address-info__item">
+          <h2 class="address-info__title">Dirección IP</h2>
+          <p class="address-info__data" id="ip-address"></p>
+        </section>
+        <section class="address-info__item">
+          <h2 class="address-info__title">Localizacion</h2>
+          <p class="address-info__data" id="location"></p>
+        </section>
+        <section class="address-info__item">
+          <h2 class="address-info__title">Zona horaria</h2>
+          <p class="address-info__data" id="time-zone"></p>
+        </section>
+        <section class="address-info__item">
+          <h2 class="address-info__title">ISP</h2>
+          <p class="address-info__data" id="isp"></p>
+        </section>
+      </article>
+    </div>
+    <article id="contentMap" class="content-map" aria-live="assertive" ></article>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Rubik']
+        },
+      });
+    </script>
+  </body>
+</html>
