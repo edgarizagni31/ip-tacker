@@ -9,7 +9,7 @@ import './style/normalize.css';
 import './style/style.css';
 
 async function getData(ip) {
-  const { apiKey } = process.env;
+  const apiKey = 'at_AVUmlSQY4Ko4SYuvwi4eXDkaXc1Zw';
   const url = `https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${ip}`;
   let data;
 

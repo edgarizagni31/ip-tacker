@@ -1,12 +1,12 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const dotenv = require('dotenv-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TersePlugin = require('terser-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname,'dist/'),
@@ -45,7 +45,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
-        new dotenv(),
         new CleanWebpackPlugin()
     ],
     optimization: {
