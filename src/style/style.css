@@ -156,5 +156,6 @@ h2 {
    .address-info {
       grid-template-columns: repeat(4,1fr);
       grid-template-rows: 1fr;
+      top: 25%;
    }
 }
